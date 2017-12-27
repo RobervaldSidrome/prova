@@ -15,7 +15,8 @@ module.exports = function (app) {
         descricao: req.body.descricao,
         dtcompra: req.body.dtcompra,
         preco: req.body.preco,
-        origem: req.body.origem
+        origem: req.body.origem,
+        categoria: req.body.categoria
       });
       res.redirect('/');
     },
