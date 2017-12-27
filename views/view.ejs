@@ -1,0 +1,31 @@
+<%- include('./layout/head') %>
+<legend><h5>Visualizar Produtos</h5>
+  <table class="bordered striped"> 
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Data de Compra</th>
+          <th>Preço</th>
+          <th>Orígem</th>
+          <th>Categoria</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><%= product.descricao %></td>
+          <td><%= product.dtcompra %></td>
+          <td><%= product.preco %></td>
+          <td><%= product.origem %></td>
+          <td><%= product.categoria %></td>
+        </tr>
+      </tbody>
+  </table>
+</legend>
+  </p>
+    <a href="/" class="btn">voltar</a>
+    <a href="/edit/<%= id %>" class="btn orange">editar</a>
+    <a href="/remove/<%= id %>" class="btn red">remover</a>
+  </p>
+<%- include('./layout/footer') %>

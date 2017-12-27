@@ -1,0 +1,38 @@
+<%- include('./layout/head') %>
+    <h3>Listagem</h3>
+
+ <input class="form-control" 
+               type="text" 
+               ng-model="criterioDeBusca"
+               placeholder="Busca por Produto">
+
+    <table ng-show="products.length > 0" class="bordered striped">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Data de Compra</th>
+          <th>Preço</th>
+          <th>Orígem</th>
+          <th>Categoria</th>
+          <th>Ação</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      <% for (let key in products) { %>
+        <tr ng-repeat="produto in contatos | filter:{descricao:criterioDeBusca}">
+          <td><%= products[key].descricao %></td>
+          <td><%= products[key].dtcompra %></td>
+          <td><%= products[key].preco %></td>
+          <td><%= products[key].origem %></td>
+          <td><%= products[key].categoria %></td>
+          <td>
+            <a href="/view/<%= key %>" class="btn">Ver</a>
+          </td>
+        </tr>
+      <% }; %>
+    </tbody>
+  </table>
+
+  <p><a href="/new" class="btn btn-danger">Novo</a></p>
+<%- include('./layout/footer') %>

@@ -1,0 +1,36 @@
+<%- include('./layout/head') %>
+
+  <form action="/new" method="post">
+   <div class="card login-wrapper">
+    <div class="card-content">
+      
+      <div class="input-field">
+        <input id="descricao" name="descricao" type="text" placeholder="Descrição do produto">
+        <label for="descricao">Descricao do Produto</label>
+      </div>
+      <div class="input-field">
+        <input id="dtcompra" name="dtcompra" type="text">
+        <label for="dtcompra">Data da Compra</label>
+      </div>
+      <div class="input-field">
+        <input id="preco" name="preco" type="text">
+        <label for="preco">Preço</label>
+      </div>
+      <div class="input-field">
+        <input id="origem" name="origem" type="text">
+        <label for="origem">Origem</label>
+      </div>
+      <div class="input-field">
+        <input id="categoria" name="categoria" type="text">
+        <label for="categoria">Categoria</label>
+      </div>
+      <input class="btn blue" type="submit" value="salvar">
+      <a href="/" class="btn">voltar</a>
+    </div>
+    </div> 
+   
+  </form>
+
+<%- include('./layout/footer') %>
+
+

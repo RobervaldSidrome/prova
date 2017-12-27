@@ -1,0 +1,33 @@
+<%- include('./layout/head') %>
+
+  <form action="/edit/<%= id %>" method="post">
+    <div class="card login-wrapper">
+     <div class="card-content">
+        <div class="input-field">
+          <input id="descricao" name="descricao" type="text" value="<%= product.descricao %>">
+          <label for="descricao">Descrição</label>
+        </div>
+        <div class="input-field">
+          <input id="dtcompra" name="dtcompra" type="text" value="<%= product.dtcompra %>">
+          <label for="dtcompra">Data de Compra</label>
+        </div>
+        <div class="input-field">
+          <input id="preco" name="preco" type="text" value="<%= product.preco %>">
+          <label for="preco">Preço</label>
+        </div>
+        <div class="input-field">
+          <input id="origem" name="origem" type="text" value="<%= product.origem %>">
+          <label for="origem">Origem</label>
+        </div>
+        <div class="input-field">
+          <input id="categoria" name="categoria" type="text" value="<%= product.categoria %>">
+          <label for="categoria">Categoria</label>
+        </div>
+        <input class="btn blue" type="submit" value="salvar">
+        <a href="/view/<%= id %>" class="btn">voltar</a>
+     </div>
+    </div>
+   
+  </form>
+ 
+<%- include('./layout/footer') %>
